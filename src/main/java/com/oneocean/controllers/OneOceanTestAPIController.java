@@ -32,10 +32,23 @@ public class OneOceanTestAPIController {
 	/**
 	 * @return
 	 * @throws InvocationTargetException
+	 * @throws IllegalAccessException
 	 */	
 	@GetMapping(value = "/testAPI", produces = "application/json")
 	public JSONResponse testAPI() throws IllegalAccessException, InvocationTargetException {
 		logger.info("Hit received by controller for testAPI");
 		return reportController.testAPI();
+	}
+	
+	/**
+	 * 
+	 * @return
+	 * @throws IllegalAccessException
+	 * @throws InvocationTargetException
+	 */
+	@GetMapping(value = "/generateReport", produces = "application/json")
+	public JSONResponse generateReport() throws IllegalAccessException, InvocationTargetException {
+		logger.info("Hit received by controller for generateReport");
+		return reportController.generateReport();
 	}
 }

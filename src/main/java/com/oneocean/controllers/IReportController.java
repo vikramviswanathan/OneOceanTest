@@ -14,4 +14,5 @@ import com.oneocean.to.JSONResponse;
  */
 public interface IReportController {
 	public JSONResponse testAPI() throws IllegalAccessException, InvocationTargetException;
+	public JSONResponse generateReport() throws IllegalAccessException, InvocationTargetException;
 }
